@@ -1,0 +1,10 @@
+.lake/
+build/
+_site/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+.claude/
+.cursor/
+/.lake
