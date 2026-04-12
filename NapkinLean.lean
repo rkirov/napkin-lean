@@ -12,6 +12,11 @@ import NapkinLean.Part03_BasicTopology.Chapter06_MetricProperties
 import NapkinLean.Part03_BasicTopology.Chapter07_TopologicalSpaces
 import NapkinLean.Part03_BasicTopology.Chapter08_Compactness
 
+-- Part IV: Linear Algebra
+import NapkinLean.Part04_LinearAlgebra.Chapter12_VectorSpaces
+import NapkinLean.Part04_LinearAlgebra.Chapter13_Eigenvalues
+import NapkinLean.Part04_LinearAlgebra.Chapter14_Determinant
+
 -- Part V: More on Groups
 import NapkinLean.Part05_MoreOnGroups.Chapter09_GroupActions
 import NapkinLean.Part05_MoreOnGroups.Chapter10_SylowTheorems

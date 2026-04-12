@@ -25,6 +25,9 @@ lake build           # build the project
 | III. Basic Topology | Ch 6: Properties of Metric Spaces | Definitions + exercises |
 | III. Basic Topology | Ch 7: Topological Spaces | Definitions + exercises |
 | III. Basic Topology | Ch 8: Compactness | Definitions + exercises |
+| IV. Linear Algebra | Ch 12: Vector Spaces | Definitions + exercises |
+| IV. Linear Algebra | Ch 13: Eigen-things | Definitions + exercises |
+| IV. Linear Algebra | Ch 14: Determinant | Definitions + exercises |
 | V. More on Groups | Ch 9: Group Actions | Definitions + exercises |
 | V. More on Groups | Ch 10: The Sylow Theorems | Definitions + exercises |
 | V. More on Groups | Ch 11: The Structure Theorem | Definitions + exercises |

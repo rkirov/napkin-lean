@@ -31,6 +31,18 @@ path = "NapkinLean/Part03_BasicTopology/Chapter08_Compactness"
 title = "Chapter 8: Compactness"
 
 [[sections]]
+path = "NapkinLean/Part04_LinearAlgebra/Chapter12_VectorSpaces"
+title = "Chapter 12: Vector Spaces"
+
+[[sections]]
+path = "NapkinLean/Part04_LinearAlgebra/Chapter13_Eigenvalues"
+title = "Chapter 13: Eigen-things"
+
+[[sections]]
+path = "NapkinLean/Part04_LinearAlgebra/Chapter14_Determinant"
+title = "Chapter 14: Determinant"
+
+[[sections]]
 path = "NapkinLean/Part05_MoreOnGroups/Chapter09_GroupActions"
 title = "Chapter 9: Group Actions"
 
