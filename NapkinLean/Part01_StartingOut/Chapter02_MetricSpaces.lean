@@ -17,12 +17,11 @@ convergence, continuous maps, homeomorphisms, open and closed sets.
 
 /-! ## Section 2.1: Definition and examples of metric spaces
 
-Napkin Definition 2.1.1: A **metric space** is a pair $(M, d)$ where
-$d : M \times M \to \mathbb{R}_{\geq 0}$ satisfies positivity,
-symmetry, and the triangle inequality.
+Napkin Definition 2.1.1: A **metric space** is a pair (M, d) where
+d : M × M → ℝ≥0 satisfies positivity, symmetry, and the triangle inequality.
 
 In Mathlib, this is `MetricSpace`, which extends `PseudoMetricSpace`
-with the separation axiom (d(x,y) = 0 → x = y).
+with the separation axiom (dist x y = 0 → x = y).
 -/
 section MetricSpaceDefinition
 
@@ -59,9 +58,9 @@ end MetricExamples
 
 /-! ## Section 2.2: Convergence in metric spaces
 
-Napkin Definition 2.2.1: A sequence $(x_n)$ in a metric space **converges**
-to a limit $x$ if for every $\varepsilon > 0$ there exists $N$ such that
-$d(x_n, x) < \varepsilon$ for all $n \geq N$.
+Napkin Definition 2.2.1: A sequence (xₙ) in a metric space **converges**
+to a limit x if for every ε > 0 there exists N such that
+dist (xₙ) x < ε for all n ≥ N.
 -/
 section Convergence
 
@@ -80,10 +79,9 @@ end Convergence
 
 /-! ## Section 2.3: Continuous maps
 
-Napkin Definition 2.3.1: A function $f : M \to N$ between metric spaces
-is **continuous at a point** $p$ if for every $\varepsilon > 0$ there
-exists $\delta > 0$ such that $d(f(x), f(p)) < \varepsilon$ whenever
-$d(x, p) < \delta$.
+Napkin Definition 2.3.1: A function f : M → N between metric spaces
+is **continuous at a point** p if for every ε > 0 there
+exists δ > 0 such that dist (f x) (f p) < ε whenever dist x p < δ.
 -/
 section ContinuousMaps
 
@@ -128,11 +126,11 @@ end Homeomorphisms
 
 /-! ## Section 2.6: Open sets
 
-Napkin Definition 2.6.1: An **open ball** $B(p, r)$ is the set of
-points within distance $r$ of $p$.
+Napkin Definition 2.6.1: An **open ball** B(p, r) is the set of
+points within distance r of p.
 
-Napkin Definition 2.6.3: A set $U$ is **open** if for every $p \in U$,
-there exists $r > 0$ such that $B(p, r) \subseteq U$.
+Napkin Definition 2.6.3: A set U is **open** if for every p ∈ U,
+there exists r > 0 such that B(p, r) ⊆ U.
 -/
 section OpenSets
 
@@ -164,7 +162,7 @@ end OpenSets
 
 /-! ## Section 2.7: Closed sets
 
-Napkin Definition 2.7.1: A set $S$ is **closed** if its complement is open.
+Napkin Definition 2.7.1: A set S is **closed** if its complement is open.
 -/
 section ClosedSets
 
@@ -175,8 +173,6 @@ recall isOpen_compl_iff {X : Type*} {s : Set X} [TopologicalSpace X] :
     IsOpen sᶜ ↔ IsClosed s
 
 -- Closed balls are closed
--- In Mathlib: `Metric.isClosed_closedBall` requires an import from Pseudo.Lemmas
--- We verify via `example` since the exact recall name varies across Mathlib versions
 example {α : Type*} [PseudoMetricSpace α] (x : α) (ε : ℝ) :
     IsClosed (Metric.closedBall x ε) := Metric.isClosed_closedBall
 
@@ -193,8 +189,8 @@ theorem exercise_2A {f : ℕ → X} {a : X}
     ∃ R, ∀ n, dist (f n) a ≤ R := by
   sorry
 
-/-- Exercise 2B: Show that a map $f : M \to N$ is continuous if and only if
-the preimage of every open set is open. -/
+/-- Exercise 2B: Show that f : M → N is continuous iff the preimage of every
+open set is open. -/
 theorem exercise_2B (f : X → Y) :
     Continuous f ↔ ∀ U, IsOpen U → IsOpen (f ⁻¹' U) := by
   sorry

@@ -14,8 +14,8 @@ normal subgroups, quotient groups, and the first isomorphism theorem.
 
 /-! ## Section 3.1: Generators and cyclic groups
 
-Napkin Definition 3.1.2: A group $G$ is **cyclic** if it is generated
-by a single element, i.e. $G = \langle g \rangle$ for some $g$.
+Napkin Definition 3.1.2: A group G is **cyclic** if it is generated
+by a single element, i.e. G = ⟨g⟩ for some g.
 -/
 section Generators
 
@@ -25,8 +25,8 @@ end Generators
 
 /-! ## Section 3.2: Homomorphisms
 
-Napkin Definition 3.2.1: A **group homomorphism** $\phi : G \to H$ is a
-map satisfying $\phi(g_1 \cdot g_2) = \phi(g_1) \cdot \phi(g_2)$.
+Napkin Definition 3.2.1: A **group homomorphism** φ : G → H is a
+map satisfying φ(g₁ * g₂) = φ(g₁) * φ(g₂).
 
 In Mathlib, this is `MonoidHom` (notation: `G →* H`).
 -/
@@ -54,11 +54,11 @@ end Homomorphisms
 
 /-! ## Section 3.3: Normal subgroups and cosets
 
-Napkin Definition 3.3.1: A **coset** of $H$ in $G$ is a set of the form
-$gH = \{gh \mid h \in H\}$.
+Napkin Definition 3.3.1: A **coset** of H in G is a set of the form
+g * H = {g * h | h ∈ H}.
 
-Napkin Definition 3.3.5: A subgroup $H$ of $G$ is **normal** if
-$gHg^{-1} = H$ for all $g \in G$, i.e. conjugation preserves $H$.
+Napkin Definition 3.3.5: A subgroup H of G is **normal** if
+g * H * g⁻¹ = H for all g ∈ G, i.e. conjugation preserves H.
 -/
 section NormalSubgroups
 
@@ -76,28 +76,28 @@ end NormalSubgroups
 
 /-! ## Section 3.4: Quotient groups
 
-Napkin Definition 3.4.1: If $N$ is a normal subgroup of $G$, the
-**quotient group** $G/N$ is the group of cosets of $N$ in $G$.
+Napkin Definition 3.4.1: If N is a normal subgroup of G, the
+**quotient group** G ⧸ N is the group of cosets of N in G.
 -/
 section QuotientGroups
 
 variable {G : Type*} [Group G] (N : Subgroup G) [N.Normal]
 
--- The quotient group G / N
+-- The quotient group G ⧸ N
 #check (G ⧸ N : Type _)
 
 -- The quotient is a group
 example : Group (G ⧸ N) := inferInstance
 
--- The canonical surjection G → G/N
+-- The canonical surjection G → G ⧸ N
 #check @QuotientGroup.mk' G _ N
 
 end QuotientGroups
 
 /-! ## Section 3.5: The first isomorphism theorem
 
-Napkin Theorem 3.5.1 (First isomorphism theorem): If $\phi : G \to H$
-is a group homomorphism, then $G / \ker \phi \cong \operatorname{im} \phi$.
+Napkin Theorem 3.5.1 (First isomorphism theorem): If φ : G →* H
+is a group homomorphism, then G ⧸ ker φ ≃* range φ.
 -/
 section FirstIsomorphismTheorem
 

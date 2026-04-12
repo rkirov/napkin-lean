@@ -19,7 +19,7 @@ and Euclidean domains.
 /-! ## Section 5.1: Integral domains
 
 Napkin Definition 5.1.1: An **integral domain** is a nonzero commutative
-ring with no zero divisors: if $ab = 0$ then $a = 0$ or $b = 0$.
+ring with no zero divisors: if a * b = 0 then a = 0 or b = 0.
 
 In Mathlib, this is the combination of `CommRing`, `IsDomain`, and `Nontrivial`.
 -/
@@ -42,12 +42,11 @@ end IntegralDomains
 
 /-! ## Section 5.2: Prime ideals
 
-Napkin Definition 5.2.1: An ideal $\mathfrak{p}$ of a commutative ring $R$
-is **prime** if $\mathfrak{p} \neq R$ and whenever $ab \in \mathfrak{p}$,
-either $a \in \mathfrak{p}$ or $b \in \mathfrak{p}$.
+Napkin Definition 5.2.1: An ideal p of a commutative ring R
+is **prime** if p ≠ R and whenever a * b ∈ p,
+either a ∈ p or b ∈ p.
 
-Napkin Theorem 5.2.4: $R/\mathfrak{p}$ is an integral domain if and only
-if $\mathfrak{p}$ is prime.
+Napkin Theorem 5.2.4: R ⧸ p is an integral domain iff p is prime.
 -/
 section PrimeIdeals
 
@@ -55,19 +54,17 @@ variable {R : Type*} [CommRing R]
 
 #check @Ideal.IsPrime R
 
--- R/p is an integral domain iff p is prime (Napkin Theorem 5.2.4)
+-- R ⧸ p is an integral domain iff p is prime (Napkin Theorem 5.2.4)
 #check @Ideal.Quotient.isDomain R
 
 end PrimeIdeals
 
 /-! ## Section 5.3: Maximal ideals
 
-Napkin Definition 5.3.1: An ideal $\mathfrak{m}$ is **maximal** if
-$\mathfrak{m} \neq R$ and there is no ideal strictly between
-$\mathfrak{m}$ and $R$.
+Napkin Definition 5.3.1: An ideal m is **maximal** if
+m ≠ R and there is no ideal strictly between m and R.
 
-Napkin Theorem 5.3.3: $R/\mathfrak{m}$ is a field if and only if
-$\mathfrak{m}$ is maximal.
+Napkin Theorem 5.3.3: R ⧸ m is a field iff m is maximal.
 
 Napkin Corollary 5.3.5: Every maximal ideal is prime.
 -/
@@ -77,7 +74,7 @@ variable {R : Type*} [CommRing R]
 
 #check @Ideal.IsMaximal R
 
--- R/m is a field iff m is maximal (Napkin Theorem 5.3.3)
+-- R ⧸ m is a field iff m is maximal (Napkin Theorem 5.3.3)
 -- Forward direction:
 #check @Ideal.Quotient.field R
 
@@ -89,9 +86,9 @@ end MaximalIdeals
 
 /-! ## Section 5.4: Field of fractions
 
-Napkin Definition 5.4.1: The **field of fractions** $\operatorname{Frac}(R)$
-of an integral domain $R$ is the smallest field containing $R$, constructed
-as equivalence classes of formal fractions $a/b$ with $b \neq 0$.
+Napkin Definition 5.4.1: The **field of fractions** Frac(R)
+of an integral domain R is the smallest field containing R, constructed
+as equivalence classes of formal fractions a / b with b ≠ 0.
 -/
 section FractionField
 
@@ -125,16 +122,15 @@ section UFDs
 example : UniqueFactorizationMonoid ℤ := inferInstance
 
 -- Every PID is a UFD (Napkin Theorem 5.5.7)
--- This is an instance in Mathlib: `IsPrincipalIdealRing` → `UniqueFactorizationMonoid`
+-- This is an instance in Mathlib: IsPrincipalIdealRing → UniqueFactorizationMonoid
 
 end UFDs
 
 /-! ## Section 5.6: Euclidean domains
 
-Napkin Definition 5.6.1: A **Euclidean domain** is an integral domain $R$
-with a norm function $f : R \setminus \{0\} \to \mathbb{N}$ such that
-for all $a, b \in R$ with $b \neq 0$, there exist $q, r$ with
-$a = bq + r$ and either $r = 0$ or $f(r) < f(b)$.
+Napkin Definition 5.6.1: A **Euclidean domain** is an integral domain R
+with a norm function f : R \ {0} → ℕ such that for all a, b ∈ R with
+b ≠ 0, there exist q, r with a = b * q + r and either r = 0 or f r < f b.
 
 In Mathlib, this is `EuclideanDomain`.
 -/
@@ -153,8 +149,7 @@ end EuclideanDomains
 /-! ## Summary of ring hierarchy
 
 The Napkin presents the following chain:
-$$\text{Euclidean domain} \implies \text{PID} \implies \text{UFD}
-  \implies \text{integral domain} \implies \text{commutative ring}$$
+Euclidean domain → PID → UFD → integral domain → commutative ring
 
 All of these implications are instances in Mathlib.
 -/
@@ -164,8 +159,8 @@ section Exercises
 
 variable {R : Type*} [CommRing R]
 
-/-- Exercise 5A: Show that in an integral domain, if $ab = ac$ and $a \ne 0$
-then $b = c$. -/
+/-- Exercise 5A: Show that in an integral domain, if a * b = a * c and a ≠ 0
+then b = c. -/
 theorem exercise_5A [IsDomain R] {a b c : R} (ha : a ≠ 0) (h : a * b = a * c) :
     b = c := by
   sorry

@@ -16,8 +16,8 @@ subgroups, isomorphisms, orders, and Lagrange's theorem.
 
 /-! ## Section 1.1: Definition and examples of groups
 
-Napkin Definition 1.1.1: A **group** is a pair $(G, \star)$ where $\star$
-is an associative binary operation on $G$ with an identity element and inverses.
+Napkin Definition 1.1.1: A **group** is a pair (G, ⋆) where ⋆
+is an associative binary operation on G with an identity element and inverses.
 
 In Mathlib, this is `Group` (multiplicative) or `AddGroup` (additive),
 which extends `DivInvMonoid` with the axiom `a⁻¹ * a = 1`.
@@ -59,7 +59,7 @@ end GroupExamples
 
 /-! ### Napkin Proposition 1.1.3: Properties of groups
 
-The identity is unique, inverses are unique, and $(a^{-1})^{-1} = a$.
+The identity is unique, inverses are unique, and (a⁻¹)⁻¹ = a.
 -/
 section GroupProperties
 
@@ -76,7 +76,7 @@ recall mul_eq_one_iff_eq_inv {G : Type*} [Group G] {a b : G} :
 -- Double inverse
 recall inv_inv {G : Type*} [InvolutiveInv G] (a : G) : a⁻¹⁻¹ = a
 
--- Shoes and socks: (ab)⁻¹ = b⁻¹a⁻¹
+-- Shoes and socks: (a * b)⁻¹ = b⁻¹ * a⁻¹
 recall mul_inv_rev {G : Type*} [DivisionMonoid G] (a b : G) :
     (a * b)⁻¹ = b⁻¹ * a⁻¹
 
@@ -85,7 +85,7 @@ end GroupProperties
 /-! ## Section 1.2: Isomorphisms
 
 Napkin Definition 1.2.1: An **isomorphism** of groups is a bijective
-function $\phi : G \to H$ such that $\phi(g_1 \star g_2) = \phi(g_1) \star \phi(g_2)$.
+function φ : G → H such that φ(g₁ ⋆ g₂) = φ(g₁) ⋆ φ(g₂).
 
 In Mathlib, this is `MulEquiv` (notation: `G ≃* H`).
 -/
@@ -111,11 +111,11 @@ end Isomorphisms
 
 /-! ## Section 1.3: Orders of groups and elements
 
-Napkin Definition 1.3.1: The **order** of a group $G$, denoted $|G|$,
-is the number of elements of $G$.
+Napkin Definition 1.3.1: The **order** of a group G, denoted |G|,
+is the number of elements of G.
 
-Napkin Definition 1.3.3: The **order** of an element $g \in G$
-is the smallest positive integer $n$ such that $g^n = 1$.
+Napkin Definition 1.3.3: The **order** of an element g ∈ G
+is the smallest positive integer n such that g ^ n = 1.
 -/
 section Orders
 
@@ -125,7 +125,7 @@ section Orders
 -- Order of an element
 #check @orderOf
 
--- g^(ord g) = 1
+-- g ^ orderOf g = 1
 recall pow_orderOf_eq_one {G : Type*} [Monoid G] (x : G) :
     x ^ orderOf x = 1
 
@@ -133,8 +133,8 @@ end Orders
 
 /-! ## Section 1.4: Subgroups
 
-Napkin Definition 1.4.1: A **subgroup** $H$ of a group $G$ is a subset
-$H \subseteq G$ which is itself a group under the same operation.
+Napkin Definition 1.4.1: A **subgroup** H of a group G is a subset
+H ⊆ G which is itself a group under the same operation.
 
 In Mathlib, `Subgroup G` is a structure bundling a carrier set that is
 closed under multiplication, inverses, and contains the identity.
@@ -156,8 +156,8 @@ end Subgroups
 
 /-! ## Section 1.5: Lagrange's theorem
 
-Napkin Theorem 1.5.3 (Lagrange): If $H$ is a subgroup of a finite
-group $G$, then $|H|$ divides $|G|$.
+Napkin Theorem 1.5.3 (Lagrange): If H is a subgroup of a finite
+group G, then |H| divides |G|.
 -/
 section Lagrange
 
@@ -172,12 +172,12 @@ section Exercises
 
 variable {G : Type*} [Group G]
 
-/-- Exercise 1A: Show that if $g^2 = 1$ for every $g \in G$, then $G$ is abelian. -/
+/-- Exercise 1A: Show that if g ^ 2 = 1 for every g in G, then G is abelian. -/
 theorem exercise_1A (h : ∀ g : G, g * g = 1) : ∀ a b : G, a * b = b * a := by
   sorry
 
-/-- Exercise 1B: Let $G$ be a group of even order.
-Show that there exists $g \in G$ with $g \ne 1$ and $g^2 = 1$. -/
+/-- Exercise 1B: Let G be a group of even order.
+Show that there exists g in G with g ≠ 1 and g ^ 2 = 1. -/
 theorem exercise_1B [Fintype G] (h : Even (Fintype.card G)) :
     ∃ g : G, g ≠ 1 ∧ g * g = 1 := by
   sorry
