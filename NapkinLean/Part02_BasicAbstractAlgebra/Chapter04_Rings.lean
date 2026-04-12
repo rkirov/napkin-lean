@@ -173,21 +173,27 @@ section Exercises
 
 variable {R : Type*} [CommRing R]
 
+-- Note: these are all in Mathlib, so `exact?` will find them trivially.
+-- The point is to prove them from the ring axioms directly.
+
 /-- Exercise 4A: Show that in any ring, 0 * a = 0. -/
-recall zero_mul {R : Type*} [MulZeroClass R] (a : R) : 0 * a = 0
+theorem exercise_4A (a : R) : 0 * a = 0 := by
+  sorry
 
 /-- Exercise 4B: Show that (-1) * a = -a. -/
-recall neg_one_mul {α : Type*} [MulOneClass α] [HasDistribNeg α] (a : α) :
-    -1 * a = -a
+theorem exercise_4B (a : R) : -1 * a = -a := by
+  sorry
 
-/-- Exercise 4C: Show that the kernel of a ring homomorphism is an ideal. -/
--- This is `RingHom.ker` in Mathlib
-example {S : Type*} [CommRing S] (f : R →+* S) : Ideal R := RingHom.ker f
+/-- Exercise 4C: Show that the kernel of a ring homomorphism is closed under
+addition. -/
+theorem exercise_4C {S : Type*} [CommRing S] (f : R →+* S)
+    {a b : R} (ha : f a = 0) (hb : f b = 0) : f (a + b) = 0 := by
+  sorry
 
-/-- Exercise 4D: Show that the quotient of a commutative ring by a maximal
-ideal is a field. -/
--- This is `Ideal.Quotient.field` in Mathlib
-noncomputable example (I : Ideal R) [I.IsMaximal] : Field (R ⧸ I) :=
-  Ideal.Quotient.field I
+/-- Exercise 4D: Show that if I is a maximal ideal of R, then every nonzero
+element of R ⧸ I has a multiplicative inverse. -/
+theorem exercise_4D (I : Ideal R) [I.IsMaximal]
+    (x : R ⧸ I) (hx : x ≠ 0) : ∃ y : R ⧸ I, x * y = 1 := by
+  sorry
 
 end Exercises

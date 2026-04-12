@@ -113,9 +113,14 @@ section Exercises
 
 variable {G H : Type*} [Group G] [Group H]
 
-/-- Exercise 3A: Show that the image of a group homomorphism is a subgroup. -/
--- This is already `MonoidHom.range` in Mathlib, so we verify it:
-example (f : G →* H) : Subgroup H := f.range
+-- Note: these are all in Mathlib, so `exact?` will find them trivially.
+-- The point is to prove them from first principles.
+
+/-- Exercise 3A: The image of a group homomorphism is closed under
+multiplication. -/
+theorem exercise_3A (f : G →* H) {a b : H}
+    (ha : a ∈ f.range) (hb : b ∈ f.range) : a * b ∈ f.range := by
+  sorry
 
 /-- Exercise 3B: Show that every subgroup of index 2 is normal. -/
 theorem exercise_3B (H : Subgroup G) (h : H.index = 2) : H.Normal := by

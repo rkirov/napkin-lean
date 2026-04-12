@@ -159,14 +159,18 @@ section Exercises
 
 variable {R : Type*} [CommRing R]
 
+-- Note: these are all in Mathlib, so `exact?` will find them trivially.
+-- The point is to prove them from first principles.
+
 /-- Exercise 5A: Show that in an integral domain, if a * b = a * c and a ≠ 0
 then b = c. -/
 theorem exercise_5A [IsDomain R] {a b c : R} (ha : a ≠ 0) (h : a * b = a * c) :
     b = c := by
   sorry
 
-/-- Exercise 5B: Show that every field is an integral domain. -/
--- This is an instance in Mathlib: Field → IsDomain
-example {K : Type*} [Field K] : IsDomain K := inferInstance
+/-- Exercise 5B: In a field, if a * b = 0 then a = 0 or b = 0. -/
+theorem exercise_5B {K : Type*} [Field K] {a b : K} (h : a * b = 0) :
+    a = 0 ∨ b = 0 := by
+  sorry
 
 end Exercises
