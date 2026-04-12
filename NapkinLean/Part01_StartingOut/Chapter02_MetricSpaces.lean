@@ -1,8 +1,5 @@
 import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Topology.MetricSpace.Isometry
-import Mathlib.Topology.MetricSpace.Lipschitz
 import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Topology.Order
 import Mathlib.Tactic
 
 /-! # Chapter 2: Metric spaces

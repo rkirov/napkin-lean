@@ -1,5 +1,4 @@
 import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.Algebra.Group.Subgroup.Pointwise
 import Mathlib.Tactic
 
 /-! # Chapter 3: Homomorphisms and quotient groups

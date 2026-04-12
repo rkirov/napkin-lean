@@ -1,7 +1,5 @@
-import Mathlib.Algebra.Group.Subgroup.Basic
 import Mathlib.GroupTheory.OrderOfElement
 import Mathlib.GroupTheory.Index
-import Mathlib.GroupTheory.Coset.Basic
 import Mathlib.Tactic
 
 /-! # Chapter 1: Groups
