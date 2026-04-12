@@ -28,6 +28,8 @@ lake build           # build the project
 | IV. Linear Algebra | Ch 12: Vector Spaces | Definitions + exercises |
 | IV. Linear Algebra | Ch 13: Eigen-things | Definitions + exercises |
 | IV. Linear Algebra | Ch 14: Determinant | Definitions + exercises |
+| VIII. Calculus 101 | Ch 15: Differentiation | Definitions + exercises |
+| VIII. Calculus 101 | Ch 16: Integration | Definitions + exercises |
 | V. More on Groups | Ch 9: Group Actions | Definitions + exercises |
 | V. More on Groups | Ch 10: The Sylow Theorems | Definitions + exercises |
 | V. More on Groups | Ch 11: The Structure Theorem | Definitions + exercises |

@@ -43,6 +43,14 @@ path = "NapkinLean/Part04_LinearAlgebra/Chapter14_Determinant"
 title = "Chapter 14: Determinant"
 
 [[sections]]
+path = "NapkinLean/Part08_Calculus101/Chapter15_Differentiation"
+title = "Chapter 15: Differentiation"
+
+[[sections]]
+path = "NapkinLean/Part08_Calculus101/Chapter16_Integration"
+title = "Chapter 16: Integration"
+
+[[sections]]
 path = "NapkinLean/Part05_MoreOnGroups/Chapter09_GroupActions"
 title = "Chapter 9: Group Actions"
 

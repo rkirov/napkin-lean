@@ -17,6 +17,10 @@ import NapkinLean.Part04_LinearAlgebra.Chapter12_VectorSpaces
 import NapkinLean.Part04_LinearAlgebra.Chapter13_Eigenvalues
 import NapkinLean.Part04_LinearAlgebra.Chapter14_Determinant
 
+-- Part VIII: Calculus 101
+import NapkinLean.Part08_Calculus101.Chapter15_Differentiation
+import NapkinLean.Part08_Calculus101.Chapter16_Integration
+
 -- Part V: More on Groups
 import NapkinLean.Part05_MoreOnGroups.Chapter09_GroupActions
 import NapkinLean.Part05_MoreOnGroups.Chapter10_SylowTheorems
