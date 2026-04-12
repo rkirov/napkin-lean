@@ -17,3 +17,27 @@ title = "Chapter 4: Rings and Ideals"
 [[sections]]
 path = "NapkinLean/Part02_BasicAbstractAlgebra/Chapter05_FlavorsOfRings"
 title = "Chapter 5: Flavors of Rings"
+
+[[sections]]
+path = "NapkinLean/Part03_BasicTopology/Chapter06_MetricProperties"
+title = "Chapter 6: Properties of Metric Spaces"
+
+[[sections]]
+path = "NapkinLean/Part03_BasicTopology/Chapter07_TopologicalSpaces"
+title = "Chapter 7: Topological Spaces"
+
+[[sections]]
+path = "NapkinLean/Part03_BasicTopology/Chapter08_Compactness"
+title = "Chapter 8: Compactness"
+
+[[sections]]
+path = "NapkinLean/Part05_MoreOnGroups/Chapter09_GroupActions"
+title = "Chapter 9: Group Actions"
+
+[[sections]]
+path = "NapkinLean/Part05_MoreOnGroups/Chapter10_SylowTheorems"
+title = "Chapter 10: The Sylow Theorems"
+
+[[sections]]
+path = "NapkinLean/Part05_MoreOnGroups/Chapter11_StructureTheorem"
+title = "Chapter 11: The Structure Theorem"

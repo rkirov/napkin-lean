@@ -6,3 +6,13 @@ import NapkinLean.Part01_StartingOut.Chapter02_MetricSpaces
 import NapkinLean.Part02_BasicAbstractAlgebra.Chapter03_Quotients
 import NapkinLean.Part02_BasicAbstractAlgebra.Chapter04_Rings
 import NapkinLean.Part02_BasicAbstractAlgebra.Chapter05_FlavorsOfRings
+
+-- Part III: Basic Topology
+import NapkinLean.Part03_BasicTopology.Chapter06_MetricProperties
+import NapkinLean.Part03_BasicTopology.Chapter07_TopologicalSpaces
+import NapkinLean.Part03_BasicTopology.Chapter08_Compactness
+
+-- Part V: More on Groups
+import NapkinLean.Part05_MoreOnGroups.Chapter09_GroupActions
+import NapkinLean.Part05_MoreOnGroups.Chapter10_SylowTheorems
+import NapkinLean.Part05_MoreOnGroups.Chapter11_StructureTheorem

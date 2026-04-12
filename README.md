@@ -20,6 +20,12 @@ lake build           # build the project
 | II. Basic Abstract Algebra | Ch 3: Homomorphisms and Quotients | Definitions + exercises |
 | II. Basic Abstract Algebra | Ch 4: Rings and Ideals | Definitions + exercises |
 | II. Basic Abstract Algebra | Ch 5: Flavors of Rings | Definitions + exercises |
+| III. Basic Topology | Ch 6: Properties of Metric Spaces | Definitions + exercises |
+| III. Basic Topology | Ch 7: Topological Spaces | Definitions + exercises |
+| III. Basic Topology | Ch 8: Compactness | Definitions + exercises |
+| V. More on Groups | Ch 9: Group Actions | Definitions + exercises |
+| V. More on Groups | Ch 10: The Sylow Theorems | Definitions + exercises |
+| V. More on Groups | Ch 11: The Structure Theorem | Definitions + exercises |
 
 ## Style
 
