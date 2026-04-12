@@ -4,6 +4,8 @@ A Lean 4 companion to Evan Chen's [*An Infinitely Large Napkin*](https://venhanc
 
 This project uses Lean 4 and [Mathlib](https://leanprover-community.github.io/mathlib4_docs/) to formalize definitions, theorems, and exercises from the Napkin. Key Mathlib definitions are restated using Lean's `recall` command to verify they match the textbook's presentation.
 
+**Note:** This project was AI-generated with Claude and hasn't been play-tested yet. Expect rough edges.
+
 ## Building
 
 ```bash
