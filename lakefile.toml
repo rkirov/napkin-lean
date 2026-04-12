@@ -15,5 +15,10 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.29.0"
 
+[[require]]
+name = "verso"
+git = "https://github.com/leanprover/verso"
+rev = "7ae82ac"
+
 [[lean_lib]]
 name = "NapkinLean"

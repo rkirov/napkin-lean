@@ -1,0 +1,19 @@
+[[sections]]
+path = "NapkinLean/Part01_StartingOut/Chapter01_Groups"
+title = "Chapter 1: Groups"
+
+[[sections]]
+path = "NapkinLean/Part01_StartingOut/Chapter02_MetricSpaces"
+title = "Chapter 2: Metric Spaces"
+
+[[sections]]
+path = "NapkinLean/Part02_BasicAbstractAlgebra/Chapter03_Quotients"
+title = "Chapter 3: Homomorphisms and Quotient Groups"
+
+[[sections]]
+path = "NapkinLean/Part02_BasicAbstractAlgebra/Chapter04_Rings"
+title = "Chapter 4: Rings and Ideals"
+
+[[sections]]
+path = "NapkinLean/Part02_BasicAbstractAlgebra/Chapter05_FlavorsOfRings"
+title = "Chapter 5: Flavors of Rings"
