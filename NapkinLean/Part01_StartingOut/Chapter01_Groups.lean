@@ -29,10 +29,10 @@ section GroupDefinition
 #check (Group : Type _ → Type _)
 
 -- The key axioms
-#check @Group.inv_mul_cancel  -- a⁻¹ * a = 1
-#check @mul_assoc             -- (a * b) * c = a * (b * c)
-#check @one_mul               -- 1 * a = a
-#check @mul_one               -- a * 1 = a
+recall Group.inv_mul_cancel {G : Type*} [Group G] (a : G) : a⁻¹ * a = 1
+recall mul_assoc {G : Type*} [Semigroup G] (a b c : G) : a * b * c = a * (b * c)
+recall one_mul {M : Type*} [MulOneClass M] (a : M) : 1 * a = a
+recall mul_one {M : Type*} [MulOneClass M] (a : M) : a * 1 = a
 
 end GroupDefinition
 
@@ -96,7 +96,8 @@ section Isomorphisms
 variable {G H : Type*} [Group G] [Group H]
 
 -- An isomorphism preserves the group operation
-#check @MulEquiv.map_mul G H
+recall MulEquiv.map_mul {M : Type*} {N : Type*} [Mul M] [Mul N]
+    (f : M ≃* N) (x y : M) : f (x * y) = f x * f y
 
 -- An isomorphism preserves the identity
 recall MulEquiv.map_one {M : Type*} {N : Type*} [MulOneClass M] [MulOneClass N]
@@ -145,9 +146,11 @@ variable {G : Type*} [Group G]
 #check (Subgroup G : Type _)
 
 -- A subgroup is closed under multiplication, inversion, and contains 1
-#check @Subgroup.mul_mem G
-#check @Subgroup.inv_mem G
-#check @Subgroup.one_mem G
+recall Subgroup.mul_mem {G : Type*} [Group G] (H : Subgroup G)
+    {x y : G} : x ∈ H → y ∈ H → x * y ∈ H
+recall Subgroup.inv_mem {G : Type*} [Group G] (H : Subgroup G)
+    {x : G} : x ∈ H → x⁻¹ ∈ H
+recall Subgroup.one_mem {G : Type*} [Group G] (H : Subgroup G) : 1 ∈ H
 
 end Subgroups
 

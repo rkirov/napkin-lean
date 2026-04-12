@@ -41,7 +41,8 @@ recall dist_triangle {α : Type*} [PseudoMetricSpace α] (x y z : α) :
 recall dist_nonneg {α : Type*} [PseudoMetricSpace α] {x y : α} : 0 ≤ dist x y
 
 -- Separation axiom (what distinguishes MetricSpace from PseudoMetricSpace)
-#check @eq_of_dist_eq_zero
+recall eq_of_dist_eq_zero {γ : Type*} [MetricSpace γ] {x y : γ} :
+    dist x y = 0 → x = y
 
 end MetricSpaceDefinition
 
@@ -120,7 +121,8 @@ variable {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]
 #check (X ≃ₜ Y : Type _)
 
 -- A homeomorphism is continuous
-#check @Homeomorph.continuous X Y
+recall Homeomorph.continuous {X : Type*} {Y : Type*}
+    [TopologicalSpace X] [TopologicalSpace Y] (h : X ≃ₜ Y) : Continuous ⇑h
 
 end Homeomorphisms
 

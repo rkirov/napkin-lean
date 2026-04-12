@@ -23,7 +23,8 @@ lake build           # build the project
 
 ## Style
 
-- **Mathlib-first**: we use Mathlib's existing definitions and use `recall` to verify they match the Napkin's presentation.
+- **Mathlib-first**: we use Mathlib's existing definitions and restate them to verify they match the Napkin's presentation.
+- **`recall` over `#check`**: use `recall` to restate Mathlib theorems and definitions — it verifies the type signature matches at compile time. Use `#check` only for `class`/`structure` declarations where `recall` doesn't apply syntactically.
 - **Textbook references**: comments reference Napkin definition/proposition numbers.
 - **Exercises as `sorry`**: exercises from the textbook are stated as theorems with `sorry` proofs, inviting contributions.
 

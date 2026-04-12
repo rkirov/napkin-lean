@@ -82,7 +82,8 @@ variable {R : Type*} [CommRing R]
 #check @Ideal.Quotient.field R
 
 -- Every maximal ideal is prime (Napkin Corollary 5.3.5)
-#check @Ideal.IsMaximal.isPrime
+recall Ideal.IsMaximal.isPrime {α : Type*} [CommSemiring α]
+    {I : Ideal α} (H : I.IsMaximal) : I.IsPrime
 
 end MaximalIdeals
 
