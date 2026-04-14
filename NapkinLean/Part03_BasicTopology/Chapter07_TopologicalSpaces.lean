@@ -30,10 +30,8 @@ section TopologicalSpaceDefinition
 #check (TopologicalSpace : Type _ → Type _)
 
 -- The axioms
-#check @isOpen_empty
-#check @isOpen_univ
-#check @IsOpen.inter
-#check @isOpen_iUnion
+recall isOpen_empty {X : Type*} [TopologicalSpace X] : IsOpen (∅ : Set X)
+recall isOpen_univ {X : Type*} [TopologicalSpace X] : IsOpen (Set.univ : Set X)
 
 end TopologicalSpaceDefinition
 
@@ -53,7 +51,7 @@ recall continuous_def {X : Type*} {Y : Type*}
     Continuous f ↔ ∀ s, IsOpen s → IsOpen (f ⁻¹' s)
 
 -- Closure (Napkin Definition 7.2.5)
-#check @closure X
+#check @closure
 
 recall isClosed_closure {X : Type*} [TopologicalSpace X] {s : Set X} :
     IsClosed (closure s)
@@ -111,7 +109,7 @@ Napkin Definition 7.5.1: A set is **clopen** if it is both open and closed.
 section Connected
 
 #check @IsClopen
-#check @IsConnected
+#check (IsConnected : Set _ → Prop)
 
 variable {X : Type*} [TopologicalSpace X]
 
@@ -133,11 +131,11 @@ can be joined by a path.
 section PathConnected
 
 #check @Path
-#check @IsPathConnected
+#check (IsPathConnected : Set _ → Prop)
 
 -- Path-connected implies connected
 recall IsPathConnected.isConnected {X : Type*} [TopologicalSpace X]
-    {s : Set X} (hs : IsPathConnected s) : IsConnected s
+    {F : Set X} (hF : IsPathConnected F) : IsConnected F
 
 end PathConnected
 

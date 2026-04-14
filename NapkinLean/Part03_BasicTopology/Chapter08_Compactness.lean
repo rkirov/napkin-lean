@@ -85,8 +85,9 @@ recall IsCompact.exists_isMaxOn {α : Type*} {β : Type*}
     ∃ x ∈ s, IsMaxOn f s x
 
 -- Compact metric spaces have uniform continuity (Napkin Proposition 8.4.8)
--- In Mathlib: CompactSpace.uniformContinuous_of_continuous
-#check @CompactSpace.uniformContinuous_of_continuous
+recall CompactSpace.uniformContinuous_of_continuous
+    {α : Type*} {β : Type*} [UniformSpace α] [UniformSpace β]
+    [CompactSpace α] {f : α → β} (h : Continuous f) : UniformContinuous f
 
 end Applications
 
@@ -100,7 +101,9 @@ Napkin Theorem 8.5.1: For metric spaces, the following are equivalent:
 section HeineBorel
 
 -- The equivalence is captured by various Mathlib results
-#check @isCompact_iff_totallyBounded_isComplete
+recall isCompact_iff_totallyBounded_isComplete
+    {α : Type*} [UniformSpace α] {s : Set α} :
+    IsCompact s ↔ TotallyBounded s ∧ IsComplete s
 
 end HeineBorel
 

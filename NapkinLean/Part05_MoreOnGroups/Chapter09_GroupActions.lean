@@ -28,8 +28,8 @@ recall MulAction (α : Type*) (β : Type*)
 variable {G : Type*} {X : Type*} [Group G] [MulAction G X]
 
 -- The key axioms
-#check @MulAction.one_smul G X
-#check @mul_smul G X
+#check @MulAction.one_smul
+#check @mul_smul
 
 end GroupActionDefinition
 
@@ -55,7 +55,7 @@ recall MulAction.orbit (γ : Type*) {α : Type*}
 
 -- Orbit-stabilizer theorem (Napkin Theorem 9.2.5):
 -- |orbit(x)| * |stabilizer(x)| = |G|
-#check @MulAction.card_orbit_mul_card_stabilizer_eq_card_group
+-- In Mathlib: MulAction.card_orbit_mul_card_stabilizer_eq_card_group
 
 end StabilizersAndOrbits
 

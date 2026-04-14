@@ -70,7 +70,10 @@ recall CompleteSpace (α : Type*) [UniformSpace α] : Prop
 example : CompleteSpace ℝ := inferInstance
 
 -- Every convergent sequence is Cauchy
-#check @Filter.Tendsto.cauchySeq
+recall Filter.Tendsto.cauchySeq {α : Type*} {β : Type*}
+    [UniformSpace α] [SemilatticeSup β] [Nonempty β]
+    {f : β → α} {x : α}
+    (hx : Filter.Tendsto f Filter.atTop (nhds x)) : CauchySeq f
 
 end Completeness
 

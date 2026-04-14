@@ -34,7 +34,10 @@ section DerivativeDefinition
 #check @HasDerivAt
 
 -- Differentiable implies continuous
-#check @HasDerivAt.continuousAt
+recall HasDerivAt.continuousAt {𝕜 : Type*} [NontriviallyNormedField 𝕜]
+    {F : Type*} [NormedAddCommGroup F] [NormedSpace 𝕜 F]
+    {f : 𝕜 → F} {f' : F} {x : 𝕜}
+    (h : HasDerivAt f f' x) : ContinuousAt f x
 
 end DerivativeDefinition
 
@@ -81,10 +84,19 @@ f'(c) = (f(b) - f(a)) / (b - a).
 section RolleAndMVT
 
 -- Rolle's theorem
-#check @exists_hasDerivAt_eq_zero
+recall exists_hasDerivAt_eq_zero {f f' : ℝ → ℝ} {a b : ℝ}
+    (hab : a < b) (hfc : ContinuousOn f (Set.Icc a b)) (hfI : f a = f b)
+    (hff' : ∀ x ∈ Set.Ioo a b, HasDerivAt f (f' x) x) :
+    ∃ c ∈ Set.Ioo a b, f' c = 0
 
--- Mean value theorem
-#check @exists_ratio_hasDerivAt_eq_ratio_slope
+-- Mean value theorem (ratio form)
+recall exists_ratio_hasDerivAt_eq_ratio_slope
+    (f f' : ℝ → ℝ) {a b : ℝ} (hab : a < b)
+    (hfc : ContinuousOn f (Set.Icc a b))
+    (hff' : ∀ x ∈ Set.Ioo a b, HasDerivAt f (f' x) x)
+    (g g' : ℝ → ℝ) (hgc : ContinuousOn g (Set.Icc a b))
+    (hgg' : ∀ x ∈ Set.Ioo a b, HasDerivAt g (g' x) x) :
+    ∃ c ∈ Set.Ioo a b, (g b - g a) * f' c = (f b - f a) * g' c
 
 end RolleAndMVT
 

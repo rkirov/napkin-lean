@@ -26,7 +26,10 @@ section RiemannIntegral
 #check @intervalIntegral
 
 -- Continuous functions are integrable
-#check @ContinuousOn.intervalIntegrable
+recall ContinuousOn.intervalIntegrable {E : Type*} [NormedAddCommGroup E]
+    {μ : MeasureTheory.Measure ℝ} [MeasureTheory.IsLocallyFiniteMeasure μ]
+    {u : ℝ → E} {a b : ℝ}
+    (hu : ContinuousOn u (Set.uIcc a b)) : IntervalIntegrable u μ a b
 
 end RiemannIntegral
 
@@ -43,7 +46,13 @@ section FTC
 #check @intervalIntegral.integral_hasDerivAt_right
 
 -- FTC Part 2: integral of the derivative
-#check @intervalIntegral.integral_eq_sub_of_hasDerivAt
+recall intervalIntegral.integral_eq_sub_of_hasDerivAt
+    {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+    {a b : ℝ} [CompleteSpace E]
+    {f f' : ℝ → E}
+    (hderiv : ∀ x ∈ Set.uIcc a b, HasDerivAt f (f' x) x)
+    (hint : IntervalIntegrable f' MeasureTheory.volume a b) :
+    ∫ y in a..b, f' y = f b - f a
 
 end FTC
 
