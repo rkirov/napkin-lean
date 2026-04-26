@@ -1,10 +1,12 @@
 # napkin-lean
 
+**Note:** This project was AI-generated with Claude and hasn't been reviewed or exercises play-tested yet. For all I know this could be all garbage.
+Other than this note, nothing else is written by a human.
+
 A Lean 4 companion to Evan Chen's [*An Infinitely Large Napkin*](https://venhance.github.io/napkin/Napkin.pdf), inspired by [Terence Tao's *Analysis in Lean*](https://teorth.github.io/analysis/).
 
 This project uses Lean 4 and [Mathlib](https://leanprover-community.github.io/mathlib4_docs/) to formalize definitions, theorems, and exercises from the Napkin. Key Mathlib definitions are restated using Lean's `recall` command to verify they match the textbook's presentation.
 
-**Note:** This project was AI-generated with Claude and hasn't been play-tested yet. Expect rough edges.
 
 ## Building
 
